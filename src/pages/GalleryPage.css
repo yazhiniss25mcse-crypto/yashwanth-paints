@@ -18,7 +18,7 @@
 .gallery-header {
     background: linear-gradient(135deg, #FF2D55 0%, #AF52DE 100%);
     padding: 4rem 2rem;
-    margin-top: -80px;
+    margin-top: -11px;
     margin-bottom: var(--spacing-3xl);
     width: 100vw;
     position: relative;
