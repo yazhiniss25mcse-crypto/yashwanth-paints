@@ -13,70 +13,11 @@ export interface Product {
 }
 
 export const products: Product[] = [
+    // INDUSTRIAL COATINGS
     {
-        id: 'epoxy-industrial-coat',
-        name: 'Epoxy Industrial Coat (2K Epoxy Paint)',
-        description: 'Epoxy Industrial Coat is a two-component (2K) epoxy coating designed for heavy-duty industrial protection. It provides excellent adhesion, surface hardness, and resistance against chemicals, abrasion, and moisture, making it ideal for demanding industrial environments.',
-        category: 'Industrial',
-        images: [
-            'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80',
-            'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
-            'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&q=80'
-        ],
-        keyFeatures: [
-            'Excellent corrosion resistance',
-            'High abrasion & chemical resistance',
-            'Strong adhesion on concrete & metal',
-            'Long service life'
-        ],
-        idealApplications: [
-            'Industrial floors & warehouses',
-            'Machinery & equipment',
-            'Steel structures & metal surfaces',
-            'Factories & commercial facilities'
-        ],
-        specifications: {
-            'System': 'Two-component epoxy',
-            'Finish Options': 'Gloss / Semi-gloss / Matt',
-            'Strength': 'High mechanical strength',
-            'Pack Sizes': '1 Ltr | 4 Ltr | 20 Ltr'
-        },
-        ctaText: 'Enquire for Industrial Epoxy Solutions'
-    },
-    {
-        id: 'autofine-metallic-red',
-        name: 'AutoFine Metallic Red (Synthetic Enamel)',
-        description: 'AutoFine Metallic Red is a high-gloss synthetic enamel metallic paint developed for automotive bodyworks and metal parts. It offers smooth flow, rich metallic appearance, and fast air-drying performance.',
-        category: 'Automotive',
-        images: [
-            'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800&q=80',
-            'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80',
-            'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80'
-        ],
-        keyFeatures: [
-            'Deep metallic gloss',
-            'Smooth flow & levelling',
-            'Scratch resistant finish',
-            'Fast air drying'
-        ],
-        idealApplications: [
-            'Cars & bikes',
-            'Automotive body panels',
-            'Metal gates & components',
-            'Decorative metal finishes'
-        ],
-        specifications: {
-            'Type': 'Single-pack synthetic enamel',
-            'Formulation': 'Metallic shade formulation',
-            'Application': 'Spray application recommended',
-            'Pack Sizes': '1 Ltr | 4 Ltr | 20 Ltr'
-        },
-        ctaText: 'Get Automotive Colour Options'
-    },
-    {
-        id: 'pu-enamel',
-        name: 'PU Enamel (2K Polyurethane Coating)',
-        description: 'PU Enamel is a two-component polyurethane coating engineered for superior durability and long-term protection of metal surfaces. It provides excellent weather resistance, chemical resistance, and gloss retention.',
+        id: 'skythane-2k-polyurethane-industrial',
+        name: 'Skythane 2K Polyurethane Coating',
+        description: 'Skythane 2K Polyurethane Coating is a two-component polyurethane coating engineered for superior durability and long-term protection of metal surfaces. It provides excellent weather resistance, chemical resistance, and gloss retention.',
         category: 'Industrial',
         images: [
             'https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80',
@@ -101,42 +42,166 @@ export const products: Product[] = [
             'Finish Options': 'Multiple finish options',
             'Pack Sizes': '1 Ltr | 4 Ltr | 20 Ltr'
         },
-        ctaText: 'Request PU Enamel Quote'
+        ctaText: 'Request Skythane Quote'
     },
     {
-        id: 'hammertone-finish',
-        name: 'Hammertone Finish',
-        description: 'Hammertone Finish is a specialty industrial decorative coating that produces a distinctive hammered texture on metal surfaces while providing corrosion protection.',
-        category: 'Decorative',
+        id: 'skyroxy-2k-epoxy-coating',
+        name: 'Skyroxy 2K Epoxy Coating',
+        description: 'Skyroxy 2K Epoxy Coating is a two-component epoxy coating designed for heavy-duty industrial protection. It provides excellent adhesion, surface hardness, and resistance against chemicals, abrasion, and moisture, making it ideal for demanding industrial environments.',
+        category: 'Industrial',
         images: [
-            'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80',
-            'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
-            'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80'
+            'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80',
+            'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
+            'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&q=80'
         ],
         keyFeatures: [
-            'Unique hammered texture finish',
-            'Decorative & protective coating',
-            'Good corrosion resistance',
-            'Quick drying'
+            'Excellent corrosion resistance',
+            'High abrasion & chemical resistance',
+            'Strong adhesion on concrete & metal',
+            'Long service life'
         ],
         idealApplications: [
-            'Electrical panels',
-            'Industrial furniture',
-            'Metal cabinets',
-            'Machinery components'
+            'Industrial floors & warehouses',
+            'Machinery & equipment',
+            'Steel structures & metal surfaces',
+            'Factories & commercial facilities'
         ],
         specifications: {
-            'Type': 'Solvent-based industrial enamel',
-            'Application': 'Spray application recommended',
-            'Shades': 'Available in multiple shades',
-            'Pack Sizes': '1 Ltr | 4 Ltr'
+            'System': 'Two-component epoxy',
+            'Finish Options': 'Gloss / Semi-gloss / Matt',
+            'Strength': 'High mechanical strength',
+            'Pack Sizes': '1 Ltr | 4 Ltr | 20 Ltr'
         },
-        ctaText: 'Explore Hammertone Colours'
+        ctaText: 'Enquire for Skyroxy Epoxy Solutions'
+    },
+
+    // AUTOMOTIVE COATINGS
+    {
+        id: 'auto-fine-coatings-1k',
+        name: 'Auto Fine Coatings (1K)',
+        description: 'Auto Fine Coatings is a high-gloss single-component (1K) synthetic enamel developed for automotive bodyworks and metal parts. It offers smooth flow, rich appearance, and fast air-drying performance.',
+        category: 'Automotive',
+        images: [
+            'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800&q=80',
+            'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80',
+            'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80'
+        ],
+        keyFeatures: [
+            'Deep gloss finish',
+            'Smooth flow & levelling',
+            'Scratch resistant finish',
+            'Fast air drying'
+        ],
+        idealApplications: [
+            'Cars & bikes',
+            'Automotive body panels',
+            'Metal gates & components',
+            'Decorative metal finishes'
+        ],
+        specifications: {
+            'Type': 'Single-component (1K) synthetic enamel',
+            'Formulation': 'Multiple color options',
+            'Application': 'Spray application recommended',
+            'Pack Sizes': '1 Ltr | 4 Ltr | 20 Ltr'
+        },
+        ctaText: 'Get Automotive Colour Options'
+    },
+    {
+        id: 'skythane-2k-polyurethane-oem',
+        name: 'Skythane 2K Polyurethane Coating (OEM)',
+        description: 'Skythane 2K Polyurethane Coating (OEM) is a premium two-component polyurethane coating specifically formulated for OEM automotive applications. It delivers exceptional durability, superior finish quality, and long-lasting protection.',
+        category: 'Automotive',
+        images: [
+            'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800&q=80',
+            'https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&q=80',
+            'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80'
+        ],
+        keyFeatures: [
+            'OEM-grade quality',
+            'Excellent weather & UV resistance',
+            'Superior gloss retention',
+            'High chemical resistance'
+        ],
+        idealApplications: [
+            'OEM automotive manufacturing',
+            'Premium automotive refinishing',
+            'Commercial vehicle coating',
+            'High-end automotive applications'
+        ],
+        specifications: {
+            'System': '2K polyurethane system',
+            'Grade': 'OEM specification',
+            'Finish': 'High gloss',
+            'Pack Sizes': '1 Ltr | 4 Ltr | 20 Ltr'
+        },
+        ctaText: 'Request OEM Coating Details'
+    },
+
+    // WOOD COATINGS
+    {
+        id: 'melamine-sealer',
+        name: 'Melamine Sealer',
+        description: 'Melamine Sealer is a base coat designed to fill wood pores and create a smooth foundation before applying melamine matt or glossy finishes.',
+        category: 'Wood',
+        images: [
+            'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80',
+            'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&q=80',
+            'https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=800&q=80'
+        ],
+        keyFeatures: [
+            'Excellent pore filling',
+            'Improves topcoat adhesion',
+            'Prevents sinkage & shrinkage',
+            'Smooth surface preparation'
+        ],
+        idealApplications: [
+            'Wooden furniture preparation',
+            'Interior wood surfaces',
+            'Pre-finish coating',
+            'Wood surface smoothing'
+        ],
+        specifications: {
+            'System': 'Two-pack sealer system',
+            'Drying': 'Fast drying',
+            'Sanding': 'Easy sanding',
+            'Pack Sizes': '1 Ltr | 4 Ltr | 20 Ltr'
+        },
+        ctaText: 'Request Sealer Information'
+    },
+    {
+        id: 'melamine-matt-finish',
+        name: 'Melamine Matt',
+        description: 'Melamine Matt is a two-pack wood coating that provides a smooth, low-sheen finish for modern interior furniture designs.',
+        category: 'Wood',
+        images: [
+            'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+            'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80',
+            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80'
+        ],
+        keyFeatures: [
+            'Elegant matt appearance',
+            'Non-reflective finish',
+            'Smooth & uniform surface',
+            'Durable interior coating'
+        ],
+        idealApplications: [
+            'Furniture',
+            'Wooden doors',
+            'Cabinets & panels',
+            'Modern interior designs'
+        ],
+        specifications: {
+            'System': 'Two-component melamine system',
+            'Gloss': 'Matt finish',
+            'Application': 'Professional application recommended',
+            'Pack Sizes': '1 Ltr | 4 Ltr | 20 Ltr'
+        },
+        ctaText: 'Enquire for Matt Wood Finish'
     },
     {
         id: 'melamine-glossy-finish',
-        name: 'Melamine Glossy Finish',
-        description: 'Melamine Glossy Finish is a high-gloss two-pack wood coating designed for premium furniture and interior wooden surfaces. It delivers a smooth, mirror-like finish with excellent durability.',
+        name: 'Melamine Glossy',
+        description: 'Melamine Glossy is a high-gloss two-pack wood coating designed for premium furniture and interior wooden surfaces. It delivers a smooth, mirror-like finish with excellent durability.',
         category: 'Wood',
         images: [
             'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80',
@@ -164,70 +229,10 @@ export const products: Product[] = [
         ctaText: 'Get Glossy Wood Finish Details'
     },
     {
-        id: 'melamine-matt-finish',
-        name: 'Melamine Matt Finish',
-        description: 'Melamine Matt Finish is a two-pack wood coating that provides a smooth, low-sheen finish for modern interior furniture designs.',
+        id: 'skythane-2k-polyurethane-sealer',
+        name: 'Skythane 2K Polyurethane Sealer',
+        description: 'Skythane 2K Polyurethane Sealer is a two-component polyurethane base coat used to seal wood surfaces and provide an ideal foundation for Skythane matt or glossy topcoats.',
         category: 'Wood',
-        images: [
-            'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
-            'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80',
-            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80'
-        ],
-        keyFeatures: [
-            'Elegant matt appearance',
-            'Non-reflective finish',
-            'Smooth & uniform surface',
-            'Durable interior coating'
-        ],
-        idealApplications: [
-            'Furniture',
-            'Wooden doors',
-            'Cabinets & panels',
-            'Modern interior designs'
-        ],
-        specifications: {
-            'System': 'Two-component melamine system',
-            'Gloss': 'Controlled gloss levels',
-            'Application': 'Professional application recommended',
-            'Pack Sizes': '1 Ltr | 4 Ltr | 20 Ltr'
-        },
-        ctaText: 'Enquire for Matt Wood Finish'
-    },
-    {
-        id: 'melamine-sealer',
-        name: 'Melamine Sealer',
-        description: 'Melamine Sealer is a base coat designed to fill wood pores and create a smooth foundation before applying melamine matt or glossy finishes.',
-        category: 'Primers',
-        images: [
-            'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80',
-            'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&q=80',
-            'https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=800&q=80'
-        ],
-        keyFeatures: [
-            'Excellent pore filling',
-            'Improves topcoat adhesion',
-            'Prevents sinkage & shrinkage',
-            'Smooth surface preparation'
-        ],
-        idealApplications: [
-            'Wooden furniture preparation',
-            'Interior wood surfaces',
-            'Pre-finish coating',
-            'Wood surface smoothing'
-        ],
-        specifications: {
-            'System': 'Two-pack sealer system',
-            'Drying': 'Fast drying',
-            'Sanding': 'Easy sanding',
-            'Pack Sizes': '1 Ltr | 4 Ltr | 20 Ltr'
-        },
-        ctaText: 'Request Sealer Information'
-    },
-    {
-        id: 'pu-sealer',
-        name: 'PU Sealer',
-        description: 'PU Sealer is a two-component polyurethane base coat used to seal wood surfaces and provide an ideal foundation for PU matt or glossy topcoats.',
-        category: 'Primers',
         images: [
             'https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=800&q=80',
             'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&q=80',
@@ -251,7 +256,67 @@ export const products: Product[] = [
             'Application': 'Spray application ideal',
             'Pack Sizes': '1 Ltr | 4 Ltr | 20 Ltr'
         },
-        ctaText: 'Get PU Sealer Details'
+        ctaText: 'Get Skythane Sealer Details'
+    },
+    {
+        id: 'skythane-2k-polyurethane-matt',
+        name: 'Skythane 2K Polyurethane Matt',
+        description: 'Skythane 2K Polyurethane Matt is a premium two-component polyurethane wood coating that provides a sophisticated matt finish with exceptional durability and protection.',
+        category: 'Wood',
+        images: [
+            'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+            'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80',
+            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80'
+        ],
+        keyFeatures: [
+            'Premium matt finish',
+            'Excellent durability',
+            'Superior scratch resistance',
+            'UV & moisture protection'
+        ],
+        idealApplications: [
+            'High-end furniture',
+            'Premium wooden doors',
+            'Luxury cabinets',
+            'Contemporary interior designs'
+        ],
+        specifications: {
+            'System': '2K polyurethane system',
+            'Gloss': 'Matt finish',
+            'Application': 'Professional spray application',
+            'Pack Sizes': '1 Ltr | 4 Ltr | 20 Ltr'
+        },
+        ctaText: 'Request Skythane Matt Quote'
+    },
+    {
+        id: 'skythane-2k-polyurethane-glossy',
+        name: 'Skythane 2K Polyurethane Glossy',
+        description: 'Skythane 2K Polyurethane Glossy is a premium two-component polyurethane wood coating that delivers a brilliant high-gloss finish with outstanding durability and long-term protection.',
+        category: 'Wood',
+        images: [
+            'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80',
+            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80',
+            'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80'
+        ],
+        keyFeatures: [
+            'Brilliant high-gloss finish',
+            'Exceptional durability',
+            'Superior scratch & stain resistance',
+            'Long-lasting gloss retention'
+        ],
+        idealApplications: [
+            'Premium furniture',
+            'Luxury wooden surfaces',
+            'High-end cabinets & wardrobes',
+            'Decorative wood finishes'
+        ],
+        specifications: {
+            'System': '2K polyurethane system',
+            'Gloss': 'High gloss finish',
+            'Application': 'Professional spray application',
+            'Pack Sizes': '1 Ltr | 4 Ltr | 20 Ltr'
+        },
+        ctaText: 'Get Skythane Glossy Details'
     }
 ];
 

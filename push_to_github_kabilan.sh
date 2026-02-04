@@ -1,13 +1,13 @@
 #!/bin/bash
 
 echo "════════════════════════════════════════════════════════"
-echo "  🚀 Pushing to GitHub - kabilan4045/paintwebsite12"
+echo "  🚀 Pushing to GitHub - LittleKirchhof/paintwebsite12"
 echo "════════════════════════════════════════════════════════"
 echo ""
-echo "Repository: https://github.com/kabilan4045/paintwebsite12"
+echo "Repository: https://github.com/LittleKirchhof/paintwebsite12"
 echo ""
 echo "📝 You will be prompted for your GitHub credentials:"
-echo "   Username: kabilan4045"
+echo "   Username: LittleKirchhof"
 echo "   Password: [Your Personal Access Token]"
 echo ""
 echo "💡 Don't have a token? Create one at:"
@@ -23,7 +23,7 @@ git push origin main
 if [ $? -eq 0 ]; then
     echo ""
     echo "✅ Successfully pushed to GitHub!"
-    echo "🌐 View your repository at: https://github.com/kabilan4045/paintwebsite12"
+    echo "🌐 View your repository at: https://github.com/LittleKirchhof/paintwebsite12"
     echo ""
     echo "Cloudflare Pages will automatically detect the changes and rebuild."
 else

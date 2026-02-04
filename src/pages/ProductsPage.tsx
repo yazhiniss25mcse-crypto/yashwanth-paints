@@ -8,7 +8,7 @@ import { products as allProducts } from '../data/products';
 const ProductsPage = () => {
     const [activeCategory, setActiveCategory] = useState('All');
 
-    const categories = ['All', 'Industrial', 'Automotive', 'Wood', 'Decorative', 'Primers'];
+    const categories = ['All', 'Industrial', 'Automotive', 'Wood'];
 
     const filteredProducts = activeCategory === 'All'
         ? allProducts
