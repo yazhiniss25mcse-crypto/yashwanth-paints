@@ -84,11 +84,72 @@
     line-height: 1.6;
 }
 
+/* Carousel Wrapper with Arrows */
+.carousel-wrapper {
+    position: relative;
+    padding: 0 4rem;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.carousel-arrow:hover {
+    background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+.carousel-arrow-left {
+    left: 0;
+}
+
+.carousel-arrow-right {
+    right: 0;
+}
+
+
 .paintbox-carousel {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    display: flex;
     gap: 2rem;
     padding: 1rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.paintbox-carousel::-webkit-scrollbar {
+    display: none;
 }
 
 .paintbox-item {
@@ -99,6 +160,10 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     animation: fadeInUp 0.6s ease-out backwards;
     aspect-ratio: 3/4;
+    flex: 0 0 calc((100% - 10rem) / 6);
+    /* Show 6 items on desktop */
+    min-width: 200px;
+    max-width: 280px;
 }
 
 .paintbox-background {
@@ -212,9 +277,10 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .paintbox-carousel {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1.5rem;
+    .paintbox-item {
+        flex: 0 0 calc((100% - 7.5rem) / 5);
+        /* Show 5 items on medium screens */
+        min-width: 180px;
     }
 }
 
@@ -231,9 +297,10 @@
         font-size: 1.15rem;
     }
 
-    .paintbox-carousel {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
+    .paintbox-item {
+        flex: 0 0 calc((100% - 6rem) / 4);
+        /* Show 4 items on tablets */
+        min-width: 160px;
     }
 }
 
@@ -259,12 +326,29 @@
         padding: 0 1rem;
     }
 
+    .carousel-wrapper {
+        padding: 0 3rem;
+    }
+
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+
     .paintbox-carousel {
-        grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
     }
 
     .paintbox-item {
+        flex: 0 0 calc((100% - 1.25rem) / 2);
+        /* Show 2 items on mobile */
+        min-width: 140px;
+        max-width: none;
         aspect-ratio: 4/5;
     }
 
@@ -311,12 +395,28 @@
         padding: 0;
     }
 
+    .carousel-wrapper {
+        padding: 0 2.5rem;
+    }
+
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .carousel-arrow svg {
+        width: 18px;
+        height: 18px;
+    }
+
     .paintbox-carousel {
-        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
 
     .paintbox-item {
+        flex: 0 0 calc((100% - 1rem) / 2);
+        /* Show 2 items */
+        min-width: 130px;
         border-radius: 16px;
         aspect-ratio: 1;
     }
@@ -345,11 +445,28 @@
         font-size: 0.95rem;
     }
 
+    .carousel-wrapper {
+        padding: 0 2rem;
+    }
+
+    .carousel-arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .carousel-arrow svg {
+        width: 16px;
+        height: 16px;
+    }
+
     .paintbox-carousel {
         gap: 0.75rem;
     }
 
     .paintbox-item {
+        flex: 0 0 calc((100% - 0.75rem) / 2);
+        /* Show 2 items */
+        min-width: 120px;
         border-radius: 12px;
     }
 

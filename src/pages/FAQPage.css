@@ -5,6 +5,7 @@
 .faq-page {
     min-height: 100vh;
     background: #FFFFFF;
+    padding-bottom: var(--spacing-4xl);
 }
 
 .faq-container {
