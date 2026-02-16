@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { getCanonicalUrl, getSiteUrl } from '../config/seo';
 
 interface SEOProps {
     title?: string;
@@ -23,8 +24,8 @@ const SEO = ({
     structuredData,
     noindex = false,
 }: SEOProps) => {
-    const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
-    const fullCanonicalUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : siteUrl);
+    const siteUrl = getSiteUrl();
+    const fullCanonicalUrl = canonicalUrl ? getCanonicalUrl(canonicalUrl) : (typeof window !== 'undefined' ? window.location.href : '');
     const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 
     return (

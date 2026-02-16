@@ -1,4 +1,6 @@
 import './BrochurePage.css';
+import SEO from '../components/SEO';
+import { getBreadcrumbSchema } from '../utils/structuredData';
 
 interface Brochure {
     title: string;
@@ -88,46 +90,60 @@ const BrochurePage = () => {
         console.log(`Downloading: ${title} from ${downloadUrl}`);
     };
 
+    const breadcrumbSchema = getBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Brochures', url: '/brochure' },
+    ]);
+
     return (
-        <div className="brochure-page">
-            <div className="brochure-container">
-                <div className="brochure-header">
-                    <h1 className="brochure-title">Download Brochures</h1>
-                    <p className="brochure-subtitle">
-                        Access our comprehensive product catalogues and technical guides
-                    </p>
-                </div>
+        <>
+            <SEO
+                title="Download Product Brochures - Technical Specifications | Yashwanth Colour Coatings"
+                description="Download detailed PDF brochures for our industrial, automotive, and decorative coatings. Get technical specifications, application guides, and product information."
+                keywords="coating brochures, paint catalog, technical specifications, product PDF, coating documentation, Chennai paint brochures"
+                canonicalUrl="/brochure"
+                structuredData={breadcrumbSchema}
+            />
+            <div className="brochure-page">
+                <div className="brochure-container">
+                    <div className="brochure-header">
+                        <h1 className="brochure-title">Download Brochures</h1>
+                        <p className="brochure-subtitle">
+                            Access our comprehensive product catalogues and technical guides
+                        </p>
+                    </div>
 
-                <div className="brochure-grid">
-                    {brochures.map((brochure, index) => (
-                        <div key={index} className="brochure-card">
-                            <div className="brochure-card__icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
+                    <div className="brochure-grid">
+                        {brochures.map((brochure, index) => (
+                            <div key={index} className="brochure-card">
+                                <div className="brochure-card__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </div>
+
+                                <div className="brochure-card__content">
+                                    <h3 className="brochure-card__title">{brochure.title}</h3>
+                                    <p className="brochure-card__description">{brochure.description}</p>
+                                    <span className="brochure-card__size">PDF • {brochure.fileSize}</span>
+                                </div>
+
+                                <button
+                                    className="brochure-card__button"
+                                    onClick={() => handleDownload(brochure.fileName, brochure.title)}
+                                >
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                    <span>Download</span>
+                                </button>
                             </div>
-
-                            <div className="brochure-card__content">
-                                <h3 className="brochure-card__title">{brochure.title}</h3>
-                                <p className="brochure-card__description">{brochure.description}</p>
-                                <span className="brochure-card__size">PDF • {brochure.fileSize}</span>
-                            </div>
-
-                            <button
-                                className="brochure-card__button"
-                                onClick={() => handleDownload(brochure.fileName, brochure.title)}
-                            >
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                                <span>Download</span>
-                            </button>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './FAQPage.css';
+import SEO from '../components/SEO';
+import { getFAQSchema, getBreadcrumbSchema } from '../utils/structuredData';
 
 interface FAQItem {
     question: string;
@@ -36,40 +38,60 @@ const FAQPage = () => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
+    const faqSchema = getFAQSchema(faqs);
+    const breadcrumbSchema = getBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'FAQs', url: '/faqs' },
+    ]);
+
+    const combinedSchema = {
+        '@context': 'https://schema.org',
+        '@graph': [faqSchema, breadcrumbSchema]
+    };
+
     return (
-        <div className="faq-page">
-            <div className="faq-header">
-                <h1 className="faq-title">Frequently Asked Questions</h1>
-                <p className="faq-subtitle">
-                    Find answers to common questions about our products and services
-                </p>
-            </div>
+        <>
+            <SEO
+                title="Frequently Asked Questions - Coating & Paint FAQs | Yashwanth Colour Coatings"
+                description="Find answers to common questions about our industrial, automotive, and decorative coatings. Learn about application, durability, pricing, and more."
+                keywords="coating FAQs, paint questions, industrial coating help, automotive paint FAQ, coating application guide"
+                canonicalUrl="/faqs"
+                structuredData={combinedSchema}
+            />
+            <div className="faq-page">
+                <div className="faq-header">
+                    <h1 className="faq-title">Frequently Asked Questions</h1>
+                    <p className="faq-subtitle">
+                        Find answers to common questions about our products and services
+                    </p>
+                </div>
 
-            <div className="faq-container">
-                <div className="faq-list">{faqs.map((faq, index) => (
-                    <div
-                        key={index}
-                        className={`faq-item ${openIndex === index ? 'faq-item--open' : ''}`}
-                    >
-                        <button
-                            className="faq-question"
-                            onClick={() => toggleFAQ(index)}
-                            aria-expanded={openIndex === index}
+                <div className="faq-container">
+                    <div className="faq-list">{faqs.map((faq, index) => (
+                        <div
+                            key={index}
+                            className={`faq-item ${openIndex === index ? 'faq-item--open' : ''}`}
                         >
-                            <span className="faq-question__text">{faq.question}</span>
-                            <span className="faq-question__icon">
-                                {openIndex === index ? '−' : '+'}
-                            </span>
-                        </button>
+                            <button
+                                className="faq-question"
+                                onClick={() => toggleFAQ(index)}
+                                aria-expanded={openIndex === index}
+                            >
+                                <span className="faq-question__text">{faq.question}</span>
+                                <span className="faq-question__icon">
+                                    {openIndex === index ? '−' : '+'}
+                                </span>
+                            </button>
 
-                        <div className={`faq-answer ${openIndex === index ? 'faq-answer--open' : ''}`}>
-                            <p>{faq.answer}</p>
+                            <div className={`faq-answer ${openIndex === index ? 'faq-answer--open' : ''}`}>
+                                <p>{faq.answer}</p>
+                            </div>
                         </div>
+                    ))}
                     </div>
-                ))}
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

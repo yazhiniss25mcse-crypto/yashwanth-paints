@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './GalleryPage.css';
+import SEO from '../components/SEO';
+import { getBreadcrumbSchema } from '../utils/structuredData';
 
 interface GalleryImage {
     id: number;
@@ -37,60 +39,74 @@ const GalleryPage = () => {
         ? galleryImages
         : galleryImages.filter(img => img.category === selectedCategory);
 
+    const breadcrumbSchema = getBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Gallery', url: '/gallery' },
+    ]);
+
     return (
-        <div className="gallery-page">
-            <div className="gallery-container">
-                {/* Header with consistent design */}
-                <div className="gallery-header">
-                    <h1 className="gallery-title">Gallery</h1>
-                    <p className="gallery-subtitle">
-                        Explore our portfolio of completed projects and coating applications
-                    </p>
-                </div>
+        <>
+            <SEO
+                title="Project Gallery - Our Coating Work Portfolio | Yashwanth Colour Coatings"
+                description="Explore our portfolio of completed industrial, automotive, and decorative coating projects. See the quality and finish of Yashwanth Colour Coatings work across Chennai."
+                keywords="coating projects, paint portfolio, industrial painting gallery, automotive coating examples, Chennai coating work"
+                canonicalUrl="/gallery"
+                structuredData={breadcrumbSchema}
+            />
+            <div className="gallery-page">
+                <div className="gallery-container">
+                    {/* Header with consistent design */}
+                    <div className="gallery-header">
+                        <h1 className="gallery-title">Gallery</h1>
+                        <p className="gallery-subtitle">
+                            Explore our portfolio of completed projects and coating applications
+                        </p>
+                    </div>
 
-                {/* Category Filter */}
-                <div className="gallery-filters">
-                    {categories.map((category) => (
-                        <button
-                            key={category}
-                            className={`filter-btn ${selectedCategory === category ? 'filter-btn--active' : ''}`}
-                            onClick={() => setSelectedCategory(category)}
-                        >
-                            {category}
-                        </button>
-                    ))}
-                </div>
+                    {/* Category Filter */}
+                    <div className="gallery-filters">
+                        {categories.map((category) => (
+                            <button
+                                key={category}
+                                className={`filter-btn ${selectedCategory === category ? 'filter-btn--active' : ''}`}
+                                onClick={() => setSelectedCategory(category)}
+                            >
+                                {category}
+                            </button>
+                        ))}
+                    </div>
 
-                {/* Gallery Grid */}
-                <div className="gallery-grid">
-                    {filteredImages.map((image) => (
-                        <div
-                            key={image.id}
-                            className="gallery-item"
-                            onClick={() => setLightboxImage(image.imageUrl)}
-                        >
-                            <img src={image.imageUrl} alt={image.title} />
-                            <div className="gallery-item__overlay">
-                                <h3 className="gallery-item__title">{image.title}</h3>
-                                <span className="gallery-item__category">{image.category}</span>
+                    {/* Gallery Grid */}
+                    <div className="gallery-grid">
+                        {filteredImages.map((image) => (
+                            <div
+                                key={image.id}
+                                className="gallery-item"
+                                onClick={() => setLightboxImage(image.imageUrl)}
+                            >
+                                <img src={image.imageUrl} alt={image.title} loading="lazy" width="800" height="600" />
+                                <div className="gallery-item__overlay">
+                                    <h3 className="gallery-item__title">{image.title}</h3>
+                                    <span className="gallery-item__category">{image.category}</span>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
 
-            {/* Lightbox */}
-            {lightboxImage && (
-                <div className="lightbox" onClick={() => setLightboxImage(null)}>
-                    <button className="lightbox__close" onClick={() => setLightboxImage(null)}>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </button>
-                    <img src={lightboxImage} alt="Gallery" onClick={(e) => e.stopPropagation()} />
-                </div>
-            )}
-        </div>
+                {/* Lightbox */}
+                {lightboxImage && (
+                    <div className="lightbox" onClick={() => setLightboxImage(null)}>
+                        <button className="lightbox__close" onClick={() => setLightboxImage(null)}>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
+                        <img src={lightboxImage} alt="Gallery" onClick={(e) => e.stopPropagation()} />
+                    </div>
+                )}
+            </div>
+        </>
     );
 };
 
