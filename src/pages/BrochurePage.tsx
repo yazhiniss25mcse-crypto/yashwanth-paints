@@ -4,45 +4,88 @@ interface Brochure {
     title: string;
     description: string;
     fileSize: string;
+    fileName: string;
 }
 
 const BrochurePage = () => {
+    const R2_BASE_URL = "https://pub-e73e54ec7cf741bfa344f464ccfb26f0.r2.dev";
+
     const brochures: Brochure[] = [
         {
-            title: "Product Catalogue 2024",
-            description: "Complete range of our industrial and decorative coatings",
-            fileSize: "2.5 MB"
-        },
-        {
-            title: "Industrial Coatings Guide",
-            description: "Technical specifications for industrial applications",
-            fileSize: "1.8 MB"
+            title: "Product Details",
+            description: "Complete product specifications and details",
+            fileSize: "238.02 KB",
+            fileName: "Product Details.pdf"
         },
         {
             title: "Automotive Coatings",
             description: "Premium automotive paint solutions and finishes",
-            fileSize: "1.2 MB"
+            fileSize: "369.6 KB",
+            fileName: "Automotive.pdf"
         },
         {
-            title: "Wood Finishes Collection",
-            description: "Comprehensive wood coating and finishing products",
-            fileSize: "1.5 MB"
+            title: "Decorative Coatings",
+            description: "Beautiful decorative coating solutions for all surfaces",
+            fileSize: "332.4 KB",
+            fileName: "Decorative.pdf"
         },
         {
-            title: "Colour Chart",
-            description: "Full colour palette with shade codes and samples",
-            fileSize: "3.2 MB"
+            title: "Industrial Coatings",
+            description: "Technical specifications for industrial applications",
+            fileSize: "398.91 KB",
+            fileName: "Industrial.pdf"
         },
         {
-            title: "Application Guide",
-            description: "Step-by-step instructions for surface preparation and application",
-            fileSize: "900 KB"
+            title: "Hammertone Finishes",
+            description: "Distinctive hammertone texture coating solutions",
+            fileSize: "353.22 KB",
+            fileName: "Hammertone.pdf"
+        },
+        {
+            title: "Melamine Glossy",
+            description: "High-gloss melamine coating products",
+            fileSize: "569.35 KB",
+            fileName: "Melamine Glossy.pdf"
+        },
+        {
+            title: "Melamine Matt",
+            description: "Premium matte finish melamine coatings",
+            fileSize: "388.67 KB",
+            fileName: "Melamine Matt.pdf"
+        },
+        {
+            title: "Melamine Sealer",
+            description: "Professional melamine sealing solutions",
+            fileSize: "386.81 KB",
+            fileName: "melamine sealer.pdf"
+        },
+        {
+            title: "PU Matt Finish",
+            description: "Polyurethane matte finish coating products",
+            fileSize: "263.64 KB",
+            fileName: "PU Matt.pdf"
+        },
+        {
+            title: "PU Sealer",
+            description: "High-performance polyurethane sealer solutions",
+            fileSize: "260.98 KB",
+            fileName: "PU Sealer.pdf"
         }
     ];
 
-    const handleDownload = (title: string) => {
-        console.log(`Downloading: ${title}`);
-        // Add your download logic here
+    const handleDownload = (fileName: string, title: string) => {
+        const downloadUrl = `${R2_BASE_URL}/${encodeURIComponent(fileName)}`;
+
+        // Create a temporary anchor element to trigger download
+        const link = document.createElement('a');
+        link.href = downloadUrl;
+        link.download = fileName;
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        console.log(`Downloading: ${title} from ${downloadUrl}`);
     };
 
     return (
@@ -73,7 +116,7 @@ const BrochurePage = () => {
 
                             <button
                                 className="brochure-card__button"
-                                onClick={() => handleDownload(brochure.title)}
+                                onClick={() => handleDownload(brochure.fileName, brochure.title)}
                             >
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
