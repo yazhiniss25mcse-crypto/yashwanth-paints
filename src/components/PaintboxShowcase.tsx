@@ -19,6 +19,7 @@ const PaintboxShowcase = () => {
     };
 
     const paintboxes = [
+        // Original paint boxes
         {
             image: new URL('../assets/Paintbox/Paint box 1.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_orange.png', import.meta.url).href,
@@ -53,6 +54,37 @@ const PaintboxShowcase = () => {
             image: new URL('../assets/Paintbox/Paint box 1-6.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_orange.png', import.meta.url).href,
             color: '#F5A623'
+        },
+        // New paint boxes with contrasting backgrounds
+        {
+            image: new URL('../assets/Paintbox/New Image 1.png', import.meta.url).href,
+            texture: new URL('../assets/Paintbox/icon_texture_blue.png', import.meta.url).href,
+            color: '#14B8A6' // Teal
+        },
+        {
+            image: new URL('../assets/Paintbox/New Image 1-1.png', import.meta.url).href,
+            texture: new URL('../assets/Paintbox/icon_texture_red.png', import.meta.url).href,
+            color: '#FF6F61' // Coral
+        },
+        {
+            image: new URL('../assets/Paintbox/New Image 1-2.png', import.meta.url).href,
+            texture: new URL('../assets/Paintbox/icon_texture_purple.png', import.meta.url).href,
+            color: '#6366F1' // Indigo
+        },
+        {
+            image: new URL('../assets/Paintbox/New Image 1-3.png', import.meta.url).href,
+            texture: new URL('../assets/Paintbox/icon_texture_green.png', import.meta.url).href,
+            color: '#84CC16' // Lime
+        },
+        {
+            image: new URL('../assets/Paintbox/New Image 1-4.png', import.meta.url).href,
+            texture: new URL('../assets/Paintbox/icon_texture_pink.png', import.meta.url).href,
+            color: '#EC4899' // Magenta
+        },
+        {
+            image: new URL('../assets/Paintbox/New Image 1-5.png', import.meta.url).href,
+            texture: new URL('../assets/Paintbox/icon_texture_orange.png', import.meta.url).href,
+            color: '#F59E0B' // Amber
         }
     ];
 
