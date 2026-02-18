@@ -112,8 +112,8 @@ export const products: Product[] = [
         description: 'Skythane 2K Polyurethane Coating (OEM) is a premium two-component polyurethane coating specifically formulated for OEM automotive applications. It delivers exceptional durability, superior finish quality, and long-lasting protection.',
         category: 'Automotive',
         images: [
+            'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80',
             'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800&q=80',
-            'https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&q=80',
             'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80'
         ],
         keyFeatures: [
@@ -144,9 +144,9 @@ export const products: Product[] = [
         description: 'Melamine Sealer is a base coat designed to fill wood pores and create a smooth foundation before applying melamine matt or glossy finishes.',
         category: 'Wood',
         images: [
-            'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80',
+            'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=800&q=80',
             'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&q=80',
-            'https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=800&q=80'
+            'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80'
         ],
         keyFeatures: [
             'Excellent pore filling',
@@ -174,9 +174,9 @@ export const products: Product[] = [
         description: 'Melamine Matt is a two-pack wood coating that provides a smooth, low-sheen finish for modern interior furniture designs.',
         category: 'Wood',
         images: [
-            'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
-            'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80',
-            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80'
+            'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80',
+            'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80',
+            'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80'
         ],
         keyFeatures: [
             'Elegant matt appearance',
