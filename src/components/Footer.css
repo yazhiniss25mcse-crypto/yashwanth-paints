@@ -216,6 +216,17 @@
     color: var(--primary-green);
 }
 
+.footer__contact-item a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+.footer__contact-item a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
 /* Bottom Bar */
 .footer__bottom {
     display: flex;
