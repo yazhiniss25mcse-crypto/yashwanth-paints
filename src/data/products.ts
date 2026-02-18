@@ -20,9 +20,9 @@ export const products: Product[] = [
         description: 'Skythane 2K Polyurethane Coating is a two-component polyurethane coating engineered for superior durability and long-term protection of metal surfaces. It provides excellent weather resistance, chemical resistance, and gloss retention.',
         category: 'Industrial',
         images: [
-            'https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80',
-            'https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&q=80',
-            'https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?w=800&q=80'
+            'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80',
+            'https://images.unsplash.com/photo-1590959651373-a3db0f38a961?w=800&q=80',
+            'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&q=80'
         ],
         keyFeatures: [
             'Excellent weather & UV resistance',
@@ -50,9 +50,9 @@ export const products: Product[] = [
         description: 'Skyroxy 2K Epoxy Coating is a two-component epoxy coating designed for heavy-duty industrial protection. It provides excellent adhesion, surface hardness, and resistance against chemicals, abrasion, and moisture, making it ideal for demanding industrial environments.',
         category: 'Industrial',
         images: [
+            'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
             'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80',
-            'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
-            'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&q=80'
+            'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80'
         ],
         keyFeatures: [
             'Excellent corrosion resistance',
@@ -82,9 +82,9 @@ export const products: Product[] = [
         description: 'Auto Fine Coatings is a high-gloss single-component (1K) synthetic enamel developed for automotive bodyworks and metal parts. It offers smooth flow, rich appearance, and fast air-drying performance.',
         category: 'Automotive',
         images: [
-            'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800&q=80',
             'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80',
-            'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80'
+            'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80',
+            'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800&q=80'
         ],
         keyFeatures: [
             'Deep gloss finish',
