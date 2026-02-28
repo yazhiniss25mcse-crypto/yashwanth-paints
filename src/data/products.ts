@@ -1,4 +1,4 @@
-export interface Product {
+nexport interface Product {
     id: string;
     name: string;
     description: string;
@@ -204,8 +204,8 @@ export const products: Product[] = [
         description: 'Melamine Glossy is a high-gloss two-pack wood coating designed for premium furniture and interior wooden surfaces. It delivers a smooth, mirror-like finish with excellent durability.',
         category: 'Wood',
         images: [
-            'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80',
             'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80',
+            'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=800&q=80',
             'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80'
         ],
         keyFeatures: [
@@ -234,9 +234,9 @@ export const products: Product[] = [
         description: 'Skythane 2K Polyurethane Sealer is a two-component polyurethane base coat used to seal wood surfaces and provide an ideal foundation for Skythane matt or glossy topcoats.',
         category: 'Wood',
         images: [
-            'https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=800&q=80',
-            'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&q=80',
-            'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80'
+            'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80',
+            'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=800&q=80',
+            'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&q=80'
         ],
         keyFeatures: [
             'Excellent adhesion',
@@ -264,9 +264,9 @@ export const products: Product[] = [
         description: 'Skythane 2K Polyurethane Matt is a premium two-component polyurethane wood coating that provides a sophisticated matt finish with exceptional durability and protection.',
         category: 'Wood',
         images: [
-            'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
-            'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80',
-            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80'
+            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+            'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80',
+            'https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&q=80'
         ],
         keyFeatures: [
             'Premium matt finish',
@@ -294,9 +294,9 @@ export const products: Product[] = [
         description: 'Skythane 2K Polyurethane Glossy is a premium two-component polyurethane wood coating that delivers a brilliant high-gloss finish with outstanding durability and long-term protection.',
         category: 'Wood',
         images: [
-            'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80',
-            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80',
-            'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80'
+            'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80',
+            'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=800&q=80',
+            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80'
         ],
         keyFeatures: [
             'Brilliant high-gloss finish',
@@ -326,9 +326,9 @@ export const products: Product[] = [
         description: 'NC Sanding Sealer is a nitrocellulose-based sealer designed for wood surface preparation. It provides excellent pore filling and creates a smooth foundation for topcoats.',
         category: 'Wood',
         images: [
-            'https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=800&q=80',
-            'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&q=80',
-            'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80'
+            'https://images.unsplash.com/photo-1566837945700-30057527ade0?w=800&q=80',
+            'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80',
+            'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&q=80'
         ],
         keyFeatures: [
             'Fast drying',
@@ -356,9 +356,9 @@ export const products: Product[] = [
         description: '2K PU Sealer is a two-component polyurethane sealer for wood surfaces, providing superior build and durability for high-quality finishes.',
         category: 'Wood',
         images: [
-            'https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=800&q=80',
-            'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&q=80',
-            'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80'
+            'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&q=80',
+            'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=800&q=80',
+            'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80'
         ],
         keyFeatures: [
             'High build properties',
