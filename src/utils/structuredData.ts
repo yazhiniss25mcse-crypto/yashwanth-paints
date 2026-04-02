@@ -5,7 +5,7 @@ export const getOrganizationSchema = () => ({
     '@type': 'Organization',
     name: 'Yashwanth Colour Coatings',
     url: typeof window !== 'undefined' ? window.location.origin : '',
-    logo: typeof window !== 'undefined' ? `${window.location.origin}/logo.jpg` : '',
+    logo: typeof window !== 'undefined' ? `${window.location.origin}/logo-2.png` : '',
     description: 'Premium manufacturer of industrial, automotive, wood and decorative coatings in Chennai since 1995',
     address: {
         '@type': 'PostalAddress',
@@ -50,7 +50,7 @@ export const getProductSchema = (product: {
     '@type': 'Product',
     name: product.name,
     description: product.description,
-    image: product.image || '/logo.jpg',
+    image: product.image || '/logo-2.png',
     brand: {
         '@type': 'Brand',
         name: 'Yashwanth Colour Coatings',
@@ -77,7 +77,7 @@ export const getLocalBusinessSchema = () => ({
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Yashwanth Colour Coatings',
-    image: typeof window !== 'undefined' ? `${window.location.origin}/logo.jpg` : '',
+    image: typeof window !== 'undefined' ? `${window.location.origin}/logo-2.png` : '',
     '@id': typeof window !== 'undefined' ? window.location.origin : '',
     url: typeof window !== 'undefined' ? window.location.origin : '',
     telephone: '', // Add phone number

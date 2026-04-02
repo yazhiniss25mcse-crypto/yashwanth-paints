@@ -36,7 +36,7 @@
 }
 
 .logo img {
-    height: 50px;
+    height: 48px;
     width: auto;
     object-fit: contain;
 }
@@ -211,38 +211,30 @@
     }
 
     .header-content {
-        padding: 0.75rem 0;
+        padding: 0.75rem 0.5rem;
         justify-content: space-between;
-        gap: var(--spacing-sm);
+        gap: 0.5rem;
     }
 
     .logo {
-        flex-shrink: 0;
-        padding-left: 0.5rem;
+        flex: 1;
+        min-width: 0;
+        padding-left: 0;
     }
 
     .logo img {
-        height: 42px;
-    }
-
-    .logo-text__line1 {
-        font-size: 1rem;
-    }
-
-    .logo-text__line2 {
-        font-size: 0.6875rem;
+        height: 36px;
+        max-width: 100%;
     }
 
     .header-actions {
-        flex: 1;
-        justify-content: center;
-        gap: var(--spacing-sm);
+        flex-shrink: 0;
+        gap: 0.5rem;
     }
 
     .mobile-menu-toggle {
         display: flex;
         flex-shrink: 0;
-        padding-right: 0.5rem;
     }
 
     .nav {
@@ -404,23 +396,11 @@
 
 @media (max-width: 480px) {
     .logo img {
-        height: 38px;
-    }
-
-    .logo a {
-        gap: 0.5rem;
-    }
-
-    .logo-text__line1 {
-        font-size: 0.875rem;
-    }
-
-    .logo-text__line2 {
-        font-size: 0.625rem;
+        height: 30px;
     }
 
     .btn-cta {
-        padding: 0.5rem 1rem;
-        font-size: 0.75rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.7rem;
     }
 }

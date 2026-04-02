@@ -18,7 +18,7 @@ const SEO = ({
     description = 'Yashwanth Colour Coatings offers premium industrial, automotive, wood and decorative coatings in Chennai. 30+ years of trusted quality. Synthetic enamel paints, spray paints, and powder coating services.',
     keywords = 'colour coatings chennai, industrial coatings, automotive enamel, wood finish, powder coating, synthetic enamel paints, spray paints, PU enamel, epoxy coating, decorative enamels, Chennai paint manufacturer',
     canonicalUrl,
-    ogImage = '/logo.jpg',
+    ogImage = '/logo-2.png',
     ogType = 'website',
     twitterCard = 'summary_large_image',
     structuredData,

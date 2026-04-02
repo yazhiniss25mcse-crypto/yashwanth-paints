@@ -22,7 +22,7 @@ const WhatsAppWidget: React.FC = () => {
                     <div className="widget-header">
                         <div className="header-content">
                             <div className="company-avatar">
-                                <img src="/logo.jpg" alt="Yashwanth Colour Coatings" />
+                                <img src="/logo-2.png" alt="Yashwanth Colour Coatings" />
                             </div>
                             <div className="header-info">
                                 <h3>Yashwanth Colour Coatings</h3>
@@ -40,7 +40,7 @@ const WhatsAppWidget: React.FC = () => {
                     <div className="widget-body">
                         <div className="chat-message">
                             <div className="message-avatar">
-                                <img src="/logo.jpg" alt="Yashwanth Colour Coatings" />
+                                <img src="/logo-2.png" alt="Yashwanth Colour Coatings" />
                             </div>
                             <div className="message-content">
                                 <div className="message-bubble">

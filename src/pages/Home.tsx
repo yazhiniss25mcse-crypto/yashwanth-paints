@@ -4,6 +4,7 @@ import { getOrganizationSchema, getWebsiteSchema } from '../utils/structuredData
 import HeroSection from '../components/HeroSection';
 import PaintboxShowcase from '../components/PaintboxShowcase';
 import KeyProducts from '../components/KeyProducts';
+import ProductCatalog from '../components/ProductCatalog';
 
 // Lazy load below-the-fold components
 const StatsSection = lazy(() => import('../components/StatsSection'));
@@ -30,6 +31,7 @@ const Home = () => {
                 <HeroSection />
                 <PaintboxShowcase />
                 <KeyProducts />
+                <ProductCatalog />
                 <Suspense fallback={<div style={{ minHeight: '400px' }} />}>
                     <StatsSection />
                     <WhyChooseUs />

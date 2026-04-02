@@ -10,11 +10,7 @@ const Footer = () => {
                     <div className="footer__brand">
                         <div className="footer__logo-wrapper">
                             <div className="footer__logo">
-                                <img src="/logo.jpg" alt="Yashwanth Colour Coatings" />
-                            </div>
-                            <div className="footer__brand-name">
-                                <div className="footer__brand-line1">Yashwanth</div>
-                                <div className="footer__brand-line2">COLOUR COATINGS</div>
+                                <img src="/logo-1.png" alt="Yashwanth Colour Coatings" />
                             </div>
                         </div>
                         <p className="footer__description">
