@@ -1,0 +1,396 @@
+/* =========================================================
+   Founder Section
+   ========================================================= */
+.founder-section {
+    position: relative;
+    padding: 6rem 0;
+    background: linear-gradient(160deg, #0f0c1e 0%, #1a1040 40%, #0d1b2a 100%);
+    overflow: hidden;
+}
+
+/* ── Decorative blobs ─────────────────────────────────── */
+.founder-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+}
+.founder-blob--1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, transparent 70%);
+    top: -100px;
+    left: -120px;
+}
+.founder-blob--2 {
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
+    bottom: -80px;
+    right: -80px;
+}
+
+/* ── Layout ───────────────────────────────────────────── */
+.founder-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* ── Left — image column ──────────────────────────────── */
+.founder-image-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.founder-image-frame {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+}
+
+/* Glowing halo behind photo */
+.founder-image-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -56%);
+    width: 340px;
+    height: 340px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.35) 0%, transparent 70%);
+    filter: blur(40px);
+    border-radius: 50%;
+    z-index: 0;
+    animation: founderGlowPulse 4s ease-in-out infinite;
+}
+
+@keyframes founderGlowPulse {
+    0%, 100% { opacity: 0.7; transform: translate(-50%, -56%) scale(1); }
+    50%       { opacity: 1;   transform: translate(-50%, -56%) scale(1.08); }
+}
+
+/* Decorative ring */
+.founder-image-border {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    border: 2px solid rgba(245, 158, 11, 0.3);
+    z-index: 1;
+    animation: founderRingRotate 12s linear infinite;
+}
+
+.founder-image-border::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #F59E0B;
+    border-radius: 50%;
+    box-shadow: 0 0 12px 4px rgba(245, 158, 11, 0.6);
+}
+
+@keyframes founderRingRotate {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to   { transform: translateX(-50%) rotate(360deg); }
+}
+
+/* Actual photo */
+.founder-photo {
+    position: relative;
+    z-index: 2;
+    width: 290px;
+    height: 290px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+    border: 5px solid rgba(245, 158, 11, 0.5);
+    box-shadow:
+        0 0 0 12px rgba(245, 158, 11, 0.08),
+        0 30px 60px rgba(0, 0, 0, 0.5),
+        0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.founder-image-frame:hover .founder-photo {
+    transform: scale(1.03);
+    box-shadow:
+        0 0 0 16px rgba(245, 158, 11, 0.12),
+        0 35px 70px rgba(0, 0, 0, 0.55),
+        0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+/* Badge below photo */
+.founder-badge {
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(99, 102, 241, 0.12));
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 60px;
+    padding: 0.7rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.founder-badge-name {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #F59E0B;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.founder-badge-title {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 0.02em;
+}
+
+/* ── Right — content column ───────────────────────────── */
+.founder-content-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Eyebrow */
+.founder-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.founder-eyebrow-line {
+    display: inline-block;
+    width: 36px;
+    height: 2px;
+    background: linear-gradient(90deg, #F59E0B, #EF4444);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.founder-eyebrow-text {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #F59E0B;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+/* Main heading */
+.founder-heading {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.founder-heading-accent {
+    background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Lead paragraph */
+.founder-lead {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.founder-lead strong {
+    color: #F59E0B;
+    font-weight: 700;
+}
+
+/* Story paragraphs */
+.founder-story {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.founder-story p {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-size: 0.97rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.8;
+    margin: 0;
+}
+
+.founder-story em {
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+}
+
+/* Stats strip */
+.founder-stats {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.founder-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.founder-stat-number {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #F59E0B;
+    line-height: 1;
+}
+
+.founder-stat-plus {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #EF4444;
+}
+
+.founder-stat-label {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.founder-stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.12);
+    flex-shrink: 0;
+}
+
+/* Quote */
+.founder-quote {
+    margin: 0;
+    padding: 1.2rem 1.4rem;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(99, 102, 241, 0.06));
+    border-left: 3px solid #F59E0B;
+    border-radius: 0 12px 12px 0;
+
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+}
+
+.founder-quote-mark {
+    font-size: 1.4rem;
+    color: #F59E0B;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 0;
+    vertical-align: -0.15em;
+    margin: 0 0.1rem;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 900px) {
+    .founder-section {
+        padding: 4rem 0;
+    }
+
+    .founder-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .founder-image-col {
+        order: 1;
+    }
+
+    .founder-content-col {
+        order: 2;
+    }
+
+    .founder-eyebrow {
+        justify-content: center;
+    }
+
+    .founder-stats {
+        justify-content: center;
+    }
+
+    .founder-quote {
+        text-align: left;
+    }
+}
+
+@media (max-width: 600px) {
+    .founder-section {
+        padding: 3rem 0;
+    }
+
+    .founder-container {
+        padding: 0 1.25rem;
+    }
+
+    .founder-heading {
+        font-size: 2rem;
+    }
+
+    .founder-photo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .founder-image-border {
+        width: 240px;
+        height: 240px;
+    }
+
+    .founder-image-glow {
+        width: 260px;
+        height: 260px;
+    }
+
+    .founder-stats {
+        gap: 1.2rem;
+    }
+
+    .founder-stat-number {
+        font-size: 1.6rem;
+    }
+}

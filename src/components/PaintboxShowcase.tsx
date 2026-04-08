@@ -19,73 +19,240 @@ const PaintboxShowcase = () => {
     };
 
     const paintboxes = [
-        // Original paint boxes
+        // Original paint boxes (bucket photos)
         {
             image: new URL('../assets/Paintbox/Paint box 1.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_orange.png', import.meta.url).href,
-            color: '#F5A623'
+            color: '#F5A623',
+            name: 'Ultra Plus',
+            category: 'Premium Synthetic Enamel'
         },
         {
             image: new URL('../assets/Paintbox/Paint box 1-1.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_blue.png', import.meta.url).href,
-            color: '#4A90E2'
+            color: '#4A90E2',
+            name: 'Damp Guard',
+            category: 'Waterproof Coating'
         },
         {
             image: new URL('../assets/Paintbox/Paint box 1-2.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_green.png', import.meta.url).href,
-            color: '#7ED321'
+            color: '#7ED321',
+            name: 'Tingro Coat',
+            category: 'Wood Finish Coating'
         },
         {
             image: new URL('../assets/Paintbox/Paint box 1-3.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_purple.png', import.meta.url).href,
-            color: '#9013FE'
+            color: '#9013FE',
+            name: 'Skythane',
+            category: '2K PU Tech Coating'
         },
         {
             image: new URL('../assets/Paintbox/Paint box 1-4.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_pink.png', import.meta.url).href,
-            color: '#FF6B9D'
+            color: '#FF6B9D',
+            name: 'Sparx',
+            category: 'Interior / Exterior Emulsion'
         },
         {
             image: new URL('../assets/Paintbox/Paint box 1-5.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_blue.png', import.meta.url).href,
-            color: '#4A90E2'
+            color: '#4A90E2',
+            name: 'Autofine',
+            category: 'Automotive Paint'
         },
         {
             image: new URL('../assets/Paintbox/Paint box 1-6.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_orange.png', import.meta.url).href,
-            color: '#F5A623'
+            color: '#F5A623',
+            name: 'Suriyalux',
+            category: 'Hi-Gloss Synthetic Enamel'
         },
         // New paint boxes with contrasting backgrounds
         {
             image: new URL('../assets/Paintbox/New Image 1.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_blue.png', import.meta.url).href,
-            color: '#14B8A6' // Teal
+            color: '#14B8A6',
+            name: 'Sangai Lac',
+            category: 'Hi-Gloss Super Synthetic Enamel'
         },
         {
             image: new URL('../assets/Paintbox/New Image 1-1.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_red.png', import.meta.url).href,
-            color: '#FF6F61' // Coral
+            color: '#FF6F61',
+            name: 'Suriya',
+            category: 'Hi-Gloss Enamel'
         },
         {
             image: new URL('../assets/Paintbox/New Image 1-2.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_purple.png', import.meta.url).href,
-            color: '#6366F1' // Indigo
+            color: '#6366F1',
+            name: 'Skyone Autoline',
+            category: 'Glossy Automotive Paint'
         },
         {
             image: new URL('../assets/Paintbox/New Image 1-3.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_green.png', import.meta.url).href,
-            color: '#84CC16' // Lime
+            color: '#84CC16',
+            name: 'Rattai',
+            category: 'Hi-Gloss Enamel'
         },
         {
             image: new URL('../assets/Paintbox/New Image 1-4.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_pink.png', import.meta.url).href,
-            color: '#EC4899' // Magenta
+            color: '#EC4899',
+            name: 'Opex Ultra+',
+            category: 'Premium Wall Finish'
         },
         {
             image: new URL('../assets/Paintbox/New Image 1-5.png', import.meta.url).href,
             texture: new URL('../assets/Paintbox/icon_texture_orange.png', import.meta.url).href,
-            color: '#F59E0B' // Amber
-        }
+            color: '#F59E0B',
+            name: 'Trustcare',
+            category: 'Exterior Emulsion'
+        },
+        // All 20 products from the Paint Range catalog
+        {
+            image: '/products/product-1.png',
+            texture: new URL('../assets/Paintbox/icon_texture_purple.png', import.meta.url).href,
+            color: '#7C3AED',
+            name: 'Suriya',
+            category: 'Hi-Gloss Super Synthetic Enamel'
+        },
+        {
+            image: '/products/product-2.png',
+            texture: new URL('../assets/Paintbox/icon_texture_red.png', import.meta.url).href,
+            color: '#DC2626',
+            name: 'Sangai Lac',
+            category: 'Hi-Gloss Super Synthetic Enamel'
+        },
+        {
+            image: '/products/product-3.png',
+            texture: new URL('../assets/Paintbox/icon_texture_pink.png', import.meta.url).href,
+            color: '#DB2777',
+            name: 'Sangai Lac',
+            category: 'High Gloss Enamel'
+        },
+        {
+            image: '/products/product-4.png',
+            texture: new URL('../assets/Paintbox/icon_texture_blue.png', import.meta.url).href,
+            color: '#1D4ED8',
+            name: 'Skythane',
+            category: '2K PU Tech'
+        },
+        {
+            image: '/products/product-5.png',
+            texture: new URL('../assets/Paintbox/icon_texture_orange.png', import.meta.url).href,
+            color: '#D97706',
+            name: 'Rattai',
+            category: 'Hi-Gloss Enamel'
+        },
+        {
+            image: '/products/product-6.png',
+            texture: new URL('../assets/Paintbox/icon_texture_green.png', import.meta.url).href,
+            color: '#059669',
+            name: 'Suriyalux',
+            category: 'Hi-Gloss Super Synthetic Enamel'
+        },
+        {
+            image: '/products/product-7.png',
+            texture: new URL('../assets/Paintbox/icon_texture_blue.png', import.meta.url).href,
+            color: '#0284C7',
+            name: 'Skyone Autofine',
+            category: 'Automotive Paints'
+        },
+        {
+            image: '/products/product-8.png',
+            texture: new URL('../assets/Paintbox/icon_texture_purple.png', import.meta.url).href,
+            color: '#7C3AED',
+            name: 'Skyone Autofine',
+            category: 'Premium Car Finish'
+        },
+        {
+            image: '/products/product-9.png',
+            texture: new URL('../assets/Paintbox/icon_texture_green.png', import.meta.url).href,
+            color: '#16A34A',
+            name: 'Skyone Autoline',
+            category: 'Glossy Automotive Paint'
+        },
+        {
+            image: '/products/product-10.png',
+            texture: new URL('../assets/Paintbox/icon_texture_red.png', import.meta.url).href,
+            color: '#B91C1C',
+            name: 'Sangai Lac',
+            category: 'Hi-Gloss Super Synthetic Enamel'
+        },
+        {
+            image: '/products/product-11.png',
+            texture: new URL('../assets/Paintbox/icon_texture_blue.png', import.meta.url).href,
+            color: '#1E40AF',
+            name: 'Skyone Skythane',
+            category: '2K PU Tech Coating'
+        },
+        {
+            image: '/products/product-12.png',
+            texture: new URL('../assets/Paintbox/icon_texture_orange.png', import.meta.url).href,
+            color: '#EA580C',
+            name: 'Opex Ultra+',
+            category: 'Premium Wall Finish'
+        },
+        {
+            image: '/products/product-13.png',
+            texture: new URL('../assets/Paintbox/icon_texture_pink.png', import.meta.url).href,
+            color: '#9D174D',
+            name: 'Damp Faith',
+            category: 'Damp Proof Coating'
+        },
+        {
+            image: '/products/product-14.png',
+            texture: new URL('../assets/Paintbox/icon_texture_blue.png', import.meta.url).href,
+            color: '#0369A1',
+            name: 'Damp Guard',
+            category: 'Waterproof Coating'
+        },
+        {
+            image: '/products/product-15.png',
+            texture: new URL('../assets/Paintbox/icon_texture_green.png', import.meta.url).href,
+            color: '#15803D',
+            name: 'Crack Fill',
+            category: 'Wall Crack Filler'
+        },
+        {
+            image: '/products/product-16.png',
+            texture: new URL('../assets/Paintbox/icon_texture_purple.png', import.meta.url).href,
+            color: '#6D28D9',
+            name: 'Trustcare',
+            category: 'Exterior Emulsion'
+        },
+        {
+            image: '/products/product-17.png',
+            texture: new URL('../assets/Paintbox/icon_texture_orange.png', import.meta.url).href,
+            color: '#C2410C',
+            name: 'Axex',
+            category: 'Dust Proof Coating'
+        },
+        {
+            image: '/products/product-18.png',
+            texture: new URL('../assets/Paintbox/icon_texture_red.png', import.meta.url).href,
+            color: '#9F1239',
+            name: 'Acrylic Wall Putty',
+            category: 'Interior Grade Putty'
+        },
+        {
+            image: '/products/product-19.png',
+            texture: new URL('../assets/Paintbox/icon_texture_green.png', import.meta.url).href,
+            color: '#065F46',
+            name: 'Ultracare',
+            category: 'Wall Finish Emulsion'
+        },
+        {
+            image: '/products/product-20.png',
+            texture: new URL('../assets/Paintbox/icon_texture_pink.png', import.meta.url).href,
+            color: '#BE185D',
+            name: 'Sparx Emulsion',
+            category: 'Interior / Exterior Emulsion'
+        },
     ];
 
     const floatingTextures = [
@@ -161,9 +328,15 @@ const PaintboxShowcase = () => {
                                 <div className="paintbox-content">
                                     <img
                                         src={box.image}
-                                        alt="Paint Collection"
+                                        alt={box.name || 'Paint Collection'}
                                         className="paintbox-image"
                                     />
+                                    {box.name && (
+                                        <div className="paintbox-label">
+                                            <span className="paintbox-name">{box.name}</span>
+                                            <span className="paintbox-category">{box.category}</span>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         ))}
